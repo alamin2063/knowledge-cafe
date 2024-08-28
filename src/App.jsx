@@ -16,8 +16,13 @@ function App() {
   }
 
   const handleMarkAsRead = (blog) => {
-        const newTime = readTime + blog.reading_time;
+        const newTime = readTime + blog.
+        reading_time;
         setReadTime(newTime);
+
+        const idx = blog.id
+        const remainingBookmarks = bookmarks.filter(bookmarks => bookmarks.id !== idx);
+        setBookmarks(remainingBookmarks);
   }
 
 
